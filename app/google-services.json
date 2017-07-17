@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "210780142162",
+    "firebase_url": "https://fir-database-757ca.firebaseio.com",
+    "project_id": "fir-database-757ca",
+    "storage_bucket": "fir-database-757ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210780142162:android:98e68f3bbd05533f",
+        "android_client_info": {
+          "package_name": "com.c4chat.mychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210780142162-f89kis6v8lg5i5gurbv9evkv1kpk5559.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAduimvvqPl7bszEYLSM0BrUx2SD-eXT10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
