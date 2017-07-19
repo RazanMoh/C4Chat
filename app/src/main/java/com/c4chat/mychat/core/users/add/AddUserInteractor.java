@@ -8,10 +8,10 @@ package com.c4chat.mychat.core.users.add;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.c4chat.mychat.R;
 import com.c4chat.mychat.models.User;
 import com.c4chat.mychat.utils.Constants;
 import com.c4chat.mychat.utils.SharedPrefUtil;
+import com.c4chat.mychat.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;

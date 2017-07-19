@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.c4chat.mychat.R;
+
 import com.c4chat.mychat.core.registration.RegisterContract;
 import com.c4chat.mychat.core.registration.RegisterPresenter;
 import com.c4chat.mychat.core.users.add.AddUserContract;

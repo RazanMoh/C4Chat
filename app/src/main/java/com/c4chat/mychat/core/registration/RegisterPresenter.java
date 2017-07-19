@@ -1,4 +1,4 @@
-package com.c4chat.mychat.core.registeration;
+package com.c4chat.mychat.core.registration;
 
 /**
  * Created by hendalzahrani on 7/18/17.

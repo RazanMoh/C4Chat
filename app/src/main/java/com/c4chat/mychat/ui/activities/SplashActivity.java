@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import com.c4chat.mychat.R;
 
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {

@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.c4chat.mychat.R;
+
 import com.c4chat.mychat.models.User;
 
 import java.util.List;

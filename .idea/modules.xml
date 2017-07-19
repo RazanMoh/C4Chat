@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/C4Chat.iml" filepath="$PROJECT_DIR$/C4Chat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyChat.iml" filepath="$PROJECT_DIR$/MyChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
