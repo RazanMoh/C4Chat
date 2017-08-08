@@ -97,7 +97,7 @@ public class ChatFragment extends Fragment implements ChatContract.View, TextVie
     }
 
     @Override
-    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event){
         if (actionId == EditorInfo.IME_ACTION_SEND) {
             sendMessage();
             return true;
@@ -105,8 +105,16 @@ public class ChatFragment extends Fragment implements ChatContract.View, TextVie
         return false;
     }
 
-    private void sendMessage() {
+    private void sendMessage(){
         String message = mETxtMessage.getText().toString();
+        try {
+            Encryption e = new Encryption();
+            message = e.encrypt(message);
+        }
+        catch (Exception e){
+
+        }
+
         String receiver = getArguments().getString(Constants.ARG_RECEIVER);
         String receiverUid = getArguments().getString(Constants.ARG_RECEIVER_UID);
         String sender = FirebaseAuth.getInstance().getCurrentUser().getEmail();
@@ -136,6 +144,15 @@ public class ChatFragment extends Fragment implements ChatContract.View, TextVie
 
     @Override
     public void onGetMessagesSuccess(Chat chat) {
+
+        try {
+            Encryption e = new Encryption();
+            chat.message = e.decrypt(chat.message);
+        }
+        catch (Exception e){
+
+        }
+
         if (mChatRecyclerAdapter == null) {
             mChatRecyclerAdapter = new ChatRecyclerAdapter(new ArrayList<Chat>());
             mRecyclerViewChat.setAdapter(mChatRecyclerAdapter);
