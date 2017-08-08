@@ -17,6 +17,7 @@ import com.c4chat.mychat.ui.fragments.RegisterFragment;
 public class RegisterActivity extends AppCompatActivity {
     private Toolbar mToolbar;
 
+
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, RegisterActivity.class);
         context.startActivity(intent);
