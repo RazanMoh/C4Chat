@@ -8,8 +8,6 @@ import android.content.Context;
 
 import com.c4chat.mychat.models.Chat;
 
-
-
 public class ChatPresenter implements ChatContract.Presenter, ChatContract.OnSendMessageListener,
         ChatContract.OnGetMessagesListener {
     private ChatContract.View mView;

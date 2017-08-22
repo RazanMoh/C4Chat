@@ -23,10 +23,8 @@ import com.c4chat.mychat.ui.activities.UserListingActivity;
 import com.google.firebase.auth.FirebaseUser;
 
 
-
 public class RegisterFragment extends Fragment implements View.OnClickListener, RegisterContract.View, AddUserContract.View {
     private static final String TAG = RegisterFragment.class.getSimpleName();
-
     private RegisterPresenter mRegisterPresenter;
     private AddUserPresenter mAddUserPresenter;
 
@@ -34,6 +32,9 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     private Button mBtnRegister;
 
     private ProgressDialog mProgressDialog;
+
+    //public static final String MyPREFERENCES = "MyPrefs" ;
+    //public static final String secrteKey = "secrteKey";
 
     public static RegisterFragment newInstance() {
         Bundle args = new Bundle();
@@ -95,6 +96,12 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
 
     @Override
     public void onRegistrationSuccess(FirebaseUser firebaseUser) {
+
+
+       // SharedPrefUtil pre = new SharedPrefUtil(getActivity().getApplicationContext());
+
+       // pre.saveString(secrteKey, );
+
         mProgressDialog.setMessage(getString(R.string.adding_user_to_db));
         Toast.makeText(getActivity(), "Registration Successful!", Toast.LENGTH_SHORT).show();
         mAddUserPresenter.addUser(getActivity().getApplicationContext(), firebaseUser);
@@ -121,4 +128,5 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
         mProgressDialog.dismiss();
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
+
 }

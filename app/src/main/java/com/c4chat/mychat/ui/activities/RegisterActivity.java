@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import com.c4chat.mychat.R;
 import com.c4chat.mychat.ui.fragments.RegisterFragment;
 
@@ -19,6 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     public static void startActivity(Context context) {
+
         Intent intent = new Intent(context, RegisterActivity.class);
         context.startActivity(intent);
     }

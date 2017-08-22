@@ -12,11 +12,18 @@ public class SharedPrefUtil {
     /**
      * Name of the preference file
      */
-    private static final String APP_PREFS = "application_preferences";
+    private String APP_PREFS = "application_preferences";
 
     private Context mContext;
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
+
+
+    public SharedPrefUtil(Context mContext, String name){
+        this.mContext = mContext;
+        APP_PREFS= name;
+    }
+
 
     public SharedPrefUtil(Context mContext) {
         this.mContext = mContext;
@@ -134,6 +141,13 @@ public class SharedPrefUtil {
     public boolean getBoolean(String key, boolean defaultValue) {
         mSharedPreferences = mContext.getSharedPreferences(APP_PREFS, Context.MODE_PRIVATE);
         return mSharedPreferences.getBoolean(key, defaultValue);
+    }
+
+    public boolean contains(String key){
+
+        mSharedPreferences = mContext.getSharedPreferences(APP_PREFS, Context.MODE_PRIVATE);
+        return  mSharedPreferences.contains(key);
+
     }
 
     /**
